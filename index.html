@@ -31,7 +31,7 @@
     <script>
       async function cargarEventos() {
         try {
-          const res = await fetch("https://tuapi.com/eventos"); // <-- reemplaza con tu URL real
+          const res = await fetch("data/events.json");
           const eventos = await res.json();
 
           const lista = document.getElementById("eventos");
