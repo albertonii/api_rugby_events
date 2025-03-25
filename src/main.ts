@@ -1,4 +1,4 @@
-import "./style.css";
+import "./index.css";
 
 interface Evento {
   nombre: string;
@@ -11,7 +11,7 @@ interface Evento {
 async function cargarEventos() {
   try {
     const scriptURL =
-      "https://script.google.com/macros/s/AKfycbyIy_loH7eHcW2Jz0P747U2-pAX7x5JSHEmVhumYB2x4tKn8Yxog3jm4pR2j7B0IZac/exec"; // 👈 tu URL aquí
+      "https://script.google.com/macros/s/AKfycbyIy_loH7eHcW2Jz0P747U2-pAX7x5JSHEmVhumYB2x4tKn8Yxog3jm4pR2j7B0IZac/exec";
     const res = await fetch(scriptURL);
     const eventos: Evento[] = await res.json();
 
@@ -24,19 +24,22 @@ async function cargarEventos() {
       const item = document.createElement("li");
 
       item.className = `
-        bg-yellow-50 border-l-4 border-green-900 shadow-md p-4 rounded-md space-y-2
-        hover:bg-yellow-100 transition
+        bg-white/5 backdrop-blur-lg border border-white/10 shadow-xl
+        rounded-xl p-6 space-y-3 transition hover:scale-[1.01] hover:border-white/20
+        duration-300 ease-in-out
       `;
 
       item.innerHTML = `
-        <h2 class="text-xl font-bold text-green-900">${evento.nombre}</h2>
-        <p class="text-sm text-gray-600">📅 ${evento.fecha} — 📍 ${
+        <h2 class="text-2xl font-semibold text-white tracking-tight">${
+          evento.nombre
+        }</h2>
+        <p class="text-sm text-gray-300">📅 ${evento.fecha} — 📍 ${
         evento.ubicacion
       }</p>
-        <p class="text-gray-800">${evento.descripcion}</p>
+        <p class="text-gray-200 leading-relaxed">${evento.descripcion}</p>
         ${
           evento.cartel
-            ? `<img src="${evento.cartel}" alt="Cartel de ${evento.nombre}" class="mt-2 rounded shadow max-h-60 w-auto border border-green-900" />`
+            ? `<img src="${evento.cartel}" alt="Cartel de ${evento.nombre}" class="mt-3 rounded-lg shadow-lg max-h-64 w-full object-cover border border-white/10" />`
             : ""
         }
       `;
@@ -47,7 +50,7 @@ async function cargarEventos() {
     const lista = document.getElementById("eventos");
     if (lista) {
       lista.innerHTML =
-        '<p class="text-red-600 font-semibold">Error al cargar eventos 😢</p>';
+        '<p class="text-red-500 font-semibold text-center">Error al cargar eventos 😢</p>';
     }
     console.error("Error al cargar el archivo JSON:", err);
   }

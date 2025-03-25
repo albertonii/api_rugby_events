@@ -1,91 +1,118 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="bg-zinc-950 text-zinc-100">
   <head>
     <meta charset="UTF-8" />
     <title>Agregar evento – Club Mahoh</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Fuente -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet" />
+
+    <link rel="stylesheet" href="/src/index.css" />
     <script type="module" src="/src/form.ts"></script>
-    <link rel="stylesheet" href="/src/style.css" />
   </head>
 
   <body
-    class="bg-green-900 min-h-screen flex items-center justify-center font-sans">
-    <main class="bg-yellow-50 rounded-2xl shadow-lg w-full max-w-xl p-8">
-      <h1 class="text-2xl font-bold text-green-900 text-center mb-6">
+    class="min-h-screen font-sans bg-gradient-to-br from-zinc-950 via-zinc-900 to-black flex items-center justify-center p-6">
+    <main
+      class="w-full max-w-xl backdrop-blur-xl bg-white/5 border border-white/10 rounded-2xl shadow-xl p-8 text-white">
+      <h1
+        class="text-3xl font-bold text-center text-white/90 mb-8 tracking-tight">
         Añadir nuevo evento
       </h1>
 
       <form id="evento-form" class="space-y-5">
+        <!-- Campo: Nombre -->
         <div>
-          <label for="nombre" class="block text-green-900 font-medium mb-1"
-            >Nombre del evento</label
-          >
+          <label
+            for="nombre"
+            class="block mb-2 text-sm font-medium text-white/80">
+            Nombre del evento
+          </label>
           <input
             type="text"
             id="nombre"
             placeholder="Ej. Torneo de Rugby 7s"
-            class="w-full p-3 rounded-lg border border-green-300 focus:outline-none focus:ring-2 focus:ring-green-700"
+            class="w-full bg-transparent border border-white/20 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-lime-400 transition"
             required />
         </div>
 
+        <!-- Campo: Fecha -->
         <div>
-          <label for="fecha" class="block text-green-900 font-medium mb-1"
-            >Fecha</label
-          >
+          <label
+            for="fecha"
+            class="block mb-2 text-sm font-medium text-white/80">
+            Fecha
+          </label>
           <input
             type="date"
             id="fecha"
-            class="w-full p-3 rounded-lg border border-green-300 focus:outline-none focus:ring-2 focus:ring-green-700"
+            class="w-full bg-transparent border border-white/20 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-lime-400 transition"
             required />
         </div>
 
+        <!-- Campo: Ubicación -->
         <div>
-          <label for="ubicacion" class="block text-green-900 font-medium mb-1"
-            >Ubicación</label
-          >
+          <label
+            for="ubicacion"
+            class="block mb-2 text-sm font-medium text-white/80">
+            Ubicación
+          </label>
           <input
             type="text"
             id="ubicacion"
             placeholder="Campo Municipal de Risco Prieto"
-            class="w-full p-3 rounded-lg border border-green-300 focus:outline-none focus:ring-2 focus:ring-green-700"
+            class="w-full bg-transparent border border-white/20 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-lime-400 transition"
             required />
         </div>
 
+        <!-- Campo: Descripción -->
         <div>
-          <label for="descripcion" class="block text-green-900 font-medium mb-1"
-            >Descripción</label
-          >
+          <label
+            for="descripcion"
+            class="block mb-2 text-sm font-medium text-white/80">
+            Descripción
+          </label>
           <textarea
             id="descripcion"
             rows="3"
             placeholder="Breve descripción del evento"
-            class="w-full p-3 rounded-lg border border-green-300 focus:outline-none focus:ring-2 focus:ring-green-700"
+            class="w-full bg-transparent border border-white/20 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-lime-400 transition resize-none"
             required></textarea>
         </div>
 
+        <!-- Campo: Cartel -->
         <div>
-          <label for="cartel" class="block text-green-900 font-medium mb-1"
-            >URL del cartel (opcional)</label
-          >
+          <label
+            for="cartel"
+            class="block mb-2 text-sm font-medium text-white/80">
+            URL del cartel (opcional)
+          </label>
           <input
             type="url"
             id="cartel"
             placeholder="https://..."
-            class="w-full p-3 rounded-lg border border-green-300 focus:outline-none focus:ring-2 focus:ring-green-700" />
+            class="w-full bg-transparent border border-white/20 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-lime-400 transition" />
         </div>
 
+        <!-- Botón -->
         <button
           type="submit"
-          class="w-full bg-green-900 text-yellow-50 py-3 rounded-lg font-semibold text-lg hover:bg-green-800 transition">
+          class="w-full bg-lime-400 text-zinc-950 font-semibold py-3 rounded-lg text-lg hover:bg-lime-300 transition">
           Generar JSON
         </button>
       </form>
 
-      <div class="mt-8">
-        <h2 class="text-green-900 font-semibold text-lg mb-2">Resultado:</h2>
+      <!-- Salida JSON -->
+      <div class="mt-10">
+        <h2 class="text-white/80 font-medium mb-2">Resultado:</h2>
         <pre
           id="salida-json"
-          class="bg-white text-gray-800 p-4 rounded-lg border border-green-300 text-sm overflow-x-auto"></pre>
+          class="bg-white/10 text-white text-sm p-4 rounded-lg border border-white/10 overflow-x-auto whitespace-pre-wrap"></pre>
       </div>
     </main>
   </body>
