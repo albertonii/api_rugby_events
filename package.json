@@ -1,18 +1,20 @@
 {
-  "name": "clubmahoh-eventos",
+  "name": "api_rugby_events",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "pnpm build && gh-pages -d dist"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4.0.15",
     "@tailwindcss/vite": "^4.0.15",
     "@vitejs/plugin-react": "^4.3.4",
     "autoprefixer": "^10.4.21",
+    "gh-pages": "^6.3.0",
     "postcss": "^8.5.3",
     "tailwindcss": "^4.0.15",
     "typescript": "~5.7.3",
