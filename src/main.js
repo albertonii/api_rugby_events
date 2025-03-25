@@ -1,7 +1,7 @@
 import "./index.css";
 async function cargarEventos() {
     try {
-        const scriptURL = "https://script.google.com/macros/s/AKfycby2Q-y0p5QJ0Pg3gnjB7hRPSvIcoUzysOCadBp7TPmtS7Ri40d_uhTSZWaLqv-qWb4D/exec";
+        const scriptURL = "https://script.googleusercontent.com/macros/echo?user_content_key=AehSKLjOhGRGGtxBybn0kPejF0JO8FIp8pqkWG_a5LQVowOui28iAqMWFGTNlAVDmeDab9Zp7cyzcBeUNIgk8dz8v-5JjHsr-UB1wQy7nPb2leMUmki5lptlywzv1zRfGzPEKBV2XX3k2Vp0UjRQGIS2Fpiv3nuuF-DbJ0hdBv2uh7-q2i-aglm6qFarfe_jxvbCQd2P6m7G0KwnDS8JQvjQEC3ZDn95FTSC_2JsLkim2CO3ZlFqqZ7wVo5HxhWvr1EZUDLX6ZJwd7nhbUdiXhCzJ0TxRS4BrA&lib=M_OBWIfasEBukNvSAw2O0-7mSOd92qEAc";
         const res = await fetch(scriptURL, {
             redirect: "follow",
             method: "GET",

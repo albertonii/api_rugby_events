@@ -19,6 +19,8 @@ async function cargarEventos() {
       headers: {
         "Content-Type": "text/plain;charset=utf-8",
         "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "GET",
+        "Access-Control-Allow-Headers": "Content-Type",
       },
     });
 
