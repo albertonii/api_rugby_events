@@ -11,7 +11,7 @@ const salida = document.getElementById("salida-json");
 const listaEventos: Evento[] = [];
 
 const scriptURL =
-  "https://script.google.com/macros/s/AKfycbyIy_loH7eHcW2Jz0P747U2-pAX7x5JSHEmVhumYB2x4tKn8Yxog3jm4pR2j7B0IZac/exec"; // 👈 tu URL aquí
+  "https://script.google.com/macros/s/AKfycbywBVkwIuqroRN0tyv_ZOVkDZIocopYU7LhxjOVLRp321fB1OYQ9R7V-ORna7_pLsoR/exec"; // 👈 tu URL aquí
 
 // Cargar datos existentes desde events.json
 async function cargarEventosExistentes() {

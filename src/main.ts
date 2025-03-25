@@ -11,7 +11,8 @@ interface Evento {
 async function cargarEventos() {
   try {
     const scriptURL =
-      "https://script.google.com/macros/s/AKfycbyIy_loH7eHcW2Jz0P747U2-pAX7x5JSHEmVhumYB2x4tKn8Yxog3jm4pR2j7B0IZac/exec";
+      "https://script.google.com/macros/s/AKfycbywBVkwIuqroRN0tyv_ZOVkDZIocopYU7LhxjOVLRp321fB1OYQ9R7V-ORna7_pLsoR/exec";
+
     const res = await fetch(scriptURL);
 
     console.log("RESPONSE", res);
