@@ -13,7 +13,12 @@ async function cargarEventos() {
     const scriptURL =
       "https://script.google.com/macros/s/AKfycbyIy_loH7eHcW2Jz0P747U2-pAX7x5JSHEmVhumYB2x4tKn8Yxog3jm4pR2j7B0IZac/exec";
     const res = await fetch(scriptURL);
+
+    console.log("RESPONSE", res);
+
     const eventos: Evento[] = await res.json();
+
+    console.log("EVENTOS", eventos);
 
     const lista = document.getElementById("eventos");
     if (!lista) return;
