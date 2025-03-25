@@ -1,7 +1,7 @@
 import "./index.css";
 async function cargarEventos() {
     try {
-        const scriptURL = "https://script.google.com/macros/s/AKfycbywBVkwIuqroRN0tyv_ZOVkDZIocopYU7LhxjOVLRp321fB1OYQ9R7V-ORna7_pLsoR/exec";
+        const scriptURL = "https://script.googleusercontent.com/macros/echo?user_content_key=AehSKLiICt5WeK5lyxu04a43_5GkLYNT0gAQHSWKveaEeh1MZcZn0DlDvUC3InhwRRxQN9fgz3ulgimTq5svy05uhlSPFjwk9PfxLB_UAHrg4_gcJEpbXhDxHaMlVi-aSazSKyHVnsMDkXzdV5F4exkzQLhCF_Ale9J4gZED00mPDqd1tf5En-smSHLpeg9CM19QbpRikWMRu6ZM5AiDSKAEFTjhg2jX282mh2fEgvePgcj6jYsu0yIfUcv4p3RBWtLK5DDbS3VuvCRatuA53PybI-h4ZIUJdQ&lib=M_OBWIfasEBukNvSAw2O0-7mSOd92qEAc";
         const res = await fetch(scriptURL);
         console.log("RESPONSE", res);
         const eventos = await res.json();

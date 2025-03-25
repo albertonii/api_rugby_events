@@ -7,7 +7,6 @@ const scriptURL = "https://script.google.com/macros/s/AKfycbywBVkwIuqroRN0tyv_ZO
 async function cargarEventosExistentes() {
     try {
         const res = await fetch(scriptURL, {
-            mode: "no-cors",
             method: "GET",
         });
         const eventos = await res.json();
