@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eventos del Club Mahoh</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        padding: 1rem;
+      }
+      h1 {
+        text-align: center;
+      }
+      ul {
+        list-style: none;
+        padding: 0;
+      }
+      li {
+        border: 1px solid #ccc;
+        padding: 1rem;
+        margin: 0.5rem 0;
+        border-radius: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Próximos eventos</h1>
+    <ul id="eventos"></ul>
+
+    <script>
+      async function cargarEventos() {
+        try {
+          const res = await fetch("https://tuapi.com/eventos"); // <-- reemplaza con tu URL real
+          const eventos = await res.json();
+
+          const lista = document.getElementById("eventos");
+          lista.innerHTML = "";
+
+          eventos.forEach((evento) => {
+            const item = document.createElement("li");
+            item.innerHTML = `<strong>${evento.nombre}</strong><br>
+            📅 ${evento.fecha} <br>
+            📍 ${evento.ubicacion}`;
+            lista.appendChild(item);
+          });
+        } catch (err) {
+          document.getElementById("eventos").innerHTML =
+            "Error al cargar eventos 😢";
+          console.error(err);
+        }
+      }
+
+      cargarEventos();
+    </script>
+  </body>
+</html>
