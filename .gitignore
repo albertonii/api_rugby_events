@@ -3,7 +3,7 @@ node_modules/
 pnpm-lock.yaml
 
 # Vite
-dist/
+# dist/
 .vite/
 
 # Logs
