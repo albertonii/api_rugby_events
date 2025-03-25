@@ -54,7 +54,7 @@ form?.addEventListener("submit", (e) => {
     redirect: "follow",
     method: "POST",
     headers: {
-      "Content-Type": "application/json",
+      "Content-Type": "text/plain;charset=utf-8",
       "Access-Control-Allow-Origin": "*",
     },
     body: JSON.stringify(nuevoEvento),

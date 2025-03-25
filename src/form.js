@@ -38,9 +38,12 @@ form?.addEventListener("submit", (e) => {
         salida.textContent = JSON.stringify(listaEventos, null, 2);
     // Enviar a Google Sheets
     fetch(scriptURL, {
-        mode: "no-cors", // 👈 esta línea es clave - Quitar en producción
+        redirect: "follow",
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: {
+            "Content-Type": "application/json",
+            "Access-Control-Allow-Origin": "*",
+        },
         body: JSON.stringify(nuevoEvento),
     })
         .then((res) => res.json())

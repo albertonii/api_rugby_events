@@ -17,7 +17,7 @@ async function cargarEventos() {
       redirect: "follow",
       method: "GET",
       headers: {
-        "Content-Type": "application/json",
+        "Content-Type": "text/plain;charset=utf-8",
         "Access-Control-Allow-Origin": "*",
       },
     });

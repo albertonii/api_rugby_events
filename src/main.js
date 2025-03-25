@@ -2,7 +2,14 @@ import "./index.css";
 async function cargarEventos() {
     try {
         const scriptURL = "https://script.google.com/macros/s/AKfycbwCjbuwiaUmCP5T9nEg1jvlFMZaPCGdy_SVyHBKWsWqXP7OSgPNGaR7Zi8V4ZKV4d3g/exec";
-        const res = await fetch(scriptURL);
+        const res = await fetch(scriptURL, {
+            redirect: "follow",
+            method: "GET",
+            headers: {
+                "Content-Type": "application/json",
+                "Access-Control-Allow-Origin": "*",
+            },
+        });
         console.log("RESPONSE", res);
         const eventos = await res.json();
         console.log("EVENTOS", eventos);
