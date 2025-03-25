@@ -17,7 +17,6 @@ const scriptURL =
 async function cargarEventosExistentes() {
   try {
     const res = await fetch(scriptURL, {
-      mode: "no-cors",
       method: "GET",
     });
     const eventos: Evento[] = await res.json();
