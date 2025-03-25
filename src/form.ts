@@ -11,7 +11,7 @@ const salida = document.getElementById("salida-json");
 const listaEventos: Evento[] = [];
 
 const scriptURL =
-  "https://script.google.com/macros/s/AKfycbywBVkwIuqroRN0tyv_ZOVkDZIocopYU7LhxjOVLRp321fB1OYQ9R7V-ORna7_pLsoR/exec"; // 👈 tu URL aquí
+  "https://script.google.com/macros/s/AKfycbwCjbuwiaUmCP5T9nEg1jvlFMZaPCGdy_SVyHBKWsWqXP7OSgPNGaR7Zi8V4ZKV4d3g/exec"; // 👈 tu URL aquí
 
 // Cargar datos existentes desde events.json
 async function cargarEventosExistentes() {
@@ -51,9 +51,12 @@ form?.addEventListener("submit", (e) => {
 
   // Enviar a Google Sheets
   fetch(scriptURL, {
-    mode: "no-cors", // 👈 esta línea es clave - Quitar en producción
+    redirect: "follow",
     method: "POST",
-    headers: { "Content-Type": "application/json" },
+    headers: {
+      "Content-Type": "application/json",
+      "Access-Control-Allow-Origin": "*",
+    },
     body: JSON.stringify(nuevoEvento),
   })
     .then((res) => res.json())
