@@ -2,56 +2,34 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Eventos del Club Mahoh</title>
-    <style>
-      body {
-        font-family: sans-serif;
-        padding: 1rem;
-      }
-      h1 {
-        text-align: center;
-      }
-      ul {
-        list-style: none;
-        padding: 0;
-      }
-      li {
-        border: 1px solid #ccc;
-        padding: 1rem;
-        margin: 0.5rem 0;
-        border-radius: 8px;
-      }
-    </style>
+    <link rel="stylesheet" href="/src/style.css" />
   </head>
-  <body>
-    <h1>Próximos eventos</h1>
-    <ul id="eventos"></ul>
 
-    <script>
-      async function cargarEventos() {
-        try {
-          const res = await fetch("data/events.json");
-          const eventos = await res.json();
+  <body class="bg-green-900 text-green-900 min-h-screen font-sans">
+    <!-- 🟢 Header -->
+    <header
+      class="bg-yellow-50 shadow px-6 py-4 flex items-center justify-between sticky top-0 z-10">
+      <div class="flex items-center gap-3">
+        <!-- Si tienes un logo, lo pones aquí -->
+        <img src="/logo_mahoh.svg" alt="Logo Mahoh" class="w-10 h-10" />
+        <h1 class="text-2xl font-bold text-green-900">
+          Eventos del Club Mahoh
+        </h1>
+      </div>
+    </header>
 
-          const lista = document.getElementById("eventos");
-          lista.innerHTML = "";
+    <main class="max-w-3xl mx-auto px-4 py-8">
+      <h1
+        class="text-3xl md:text-4xl font-extrabold text-yellow-50 text-center mb-8">
+        Próximos eventos del Club Mahoh
+      </h1>
 
-          eventos.forEach((evento) => {
-            const item = document.createElement("li");
-            item.innerHTML = `<strong>${evento.nombre}</strong><br>
-            📅 ${evento.fecha} <br>
-            📍 ${evento.ubicacion}`;
-            lista.appendChild(item);
-          });
-        } catch (err) {
-          document.getElementById("eventos").innerHTML =
-            "Error al cargar eventos 😢";
-          console.error(err);
-        }
-      }
+      <ul id="eventos" class="space-y-6"></ul>
+    </main>
 
-      cargarEventos();
-    </script>
+    <script type="module" src="/src/main.ts"></script>
   </body>
 </html>

@@ -1,0 +1,86 @@
+[
+  {
+    "fecha": "2025-03-29",
+    "nombre": "4ª jornada Rugby XV Sénior Masculino: CRLP vs MAHOH",
+    "descripcion": "Partido de liga de Rugby XV sénior masculino en Gran Canaria.",
+    "ubicacion": "Campo de Pedro Hidalgo, Gran Canaria",
+    "cartel": ""
+  },
+  {
+    "fecha": "2025-04-26",
+    "nombre": "5ª jornada Rugby XV Sénior Masculino: MAHOH vs CRLP",
+    "descripcion": "Partido en casa contra CRLP por la 5ª jornada de la liga sénior.",
+    "ubicacion": "Campo Municipal de Risco Prieto",
+    "cartel": ""
+  },
+  {
+    "fecha": "2025-04-26",
+    "nombre": "Torneo formación + 3ª jornada M18",
+    "descripcion": "Torneo de categorías de formación en Lanzarote y campeonato M18.",
+    "ubicacion": "Lanzarote",
+    "cartel": ""
+  },
+  {
+    "fecha": "2025-05-03",
+    "nombre": "6ª jornada Rugby XV: MAHOH vs TENERIFE SUR",
+    "descripcion": "Última jornada de liga sénior masculino.",
+    "ubicacion": "Campo Municipal de Risco Prieto",
+    "cartel": ""
+  },
+  {
+    "fecha": "2025-05-03",
+    "nombre": "Torneo M12 con Shannon RFC (Irlanda)",
+    "descripcion": "Categorías de formación reciben a equipo irlandés en Fuerteventura.",
+    "ubicacion": "Campo Municipal de Risco Prieto",
+    "cartel": ""
+  },
+  {
+    "fecha": "2025-05-24",
+    "nombre": "FINAL Liga Rugby XV Sénior Masculino",
+    "descripcion": "Gran final de liga sénior masculino.",
+    "ubicacion": "Campo Municipal de Risco Prieto",
+    "cartel": ""
+  },
+  {
+    "fecha": "2025-05-25",
+    "nombre": "Torneo categorías de formación",
+    "descripcion": "Encuentro de escuelas de rugby en Risco Prieto.",
+    "ubicacion": "Campo Municipal de Risco Prieto",
+    "cartel": ""
+  },
+  {
+    "fecha": "2025-06-13",
+    "nombre": "Fiesta fin de temporada del Club",
+    "descripcion": "Celebración de cierre de temporada para jugadores y familias.",
+    "ubicacion": "Por determinar",
+    "cartel": ""
+  },
+  {
+    "fecha": "2025-06-14",
+    "nombre": "Convivencia con Club A Palos (Cuenca)",
+    "descripcion": "Recibimos a nuestros amigos de Cuenca para compartir rugby y amistad.",
+    "ubicacion": "Por determinar",
+    "cartel": ""
+  },
+  {
+    "fecha": "2025-06-14",
+    "nombre": "CESA SEVEN M16 (Día 1)",
+    "descripcion": "Campeonato de España de Selecciones Autonómicas en Valencia.",
+    "ubicacion": "Valencia",
+    "cartel": ""
+  },
+  {
+    "fecha": "2025-06-15",
+    "nombre": "CESA SEVEN M16 (Día 2)",
+    "descripcion": "Segundo día del campeonato CESA SEVEN M16.",
+    "ubicacion": "Valencia",
+    "cartel": ""
+  },
+  {
+    "fecha": "2025-06-21",
+    "nombre": "Torneo de Rugby 7s en Badajoz",
+    "descripcion": "Participación del club en torneo nacional de rugby 7s.",
+    "ubicacion": "Badajoz",
+    "cartel": ""
+  }
+]
